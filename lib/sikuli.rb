@@ -7,7 +7,7 @@ when "darwin"
 when "linux"
   case RbConfig::CONFIG['target_cpu']
   when "i386"   ; require 'sikuli/linux/sikuli-script-x86.jar'
-  when "x86_64" ; require 'sikuli/linux/sikuli-script-x86_64.jar'
+  when /x86_64|amd64/ ; require 'sikuli/linux/sikuli-script-x86_64.jar'
   else raise "Platform not supported yet"
   end
 end
